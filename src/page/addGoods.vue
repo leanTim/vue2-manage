@@ -9,8 +9,8 @@
 		  				<el-form-item label="食品种类">
 			  				<el-select v-model="categoryForm.categorySelect" :placeholder="selectValue.label" style="width:100%;">
 							    <el-option
-							      	v-for="item in categoryForm.categoryList"
-							      	:key="item.value"
+							      	v-for="(item, index) in categoryForm.categoryList"
+							      	:key="index"
 							      	:label="item.label"
 							      	:value="item.value">
 							    </el-option>
@@ -61,8 +61,8 @@
 					<el-form-item label="食品特点">
 						<el-select v-model="foodForm.attributes" multiple placeholder="请选择">
 						    <el-option
-						      	v-for="item in attributes"
-						      	:key="item.value"
+						      	v-for="(item, index) in attributes"
+						      	:key="index"
 						      	:label="item.label"
 						      	:value="item.value">
 						    </el-option>

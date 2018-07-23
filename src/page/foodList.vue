@@ -86,8 +86,8 @@
                     <el-form-item label="食品分类" label-width="100px">
 	                    <el-select v-model="selectIndex" :placeholder="selectMenu.label" @change="handleSelect">
 						    <el-option
-						      v-for="item in menuOptions"
-						      :key="item.value"
+						      v-for="(item, index) in menuOptions"
+						      :key="index"
 						      :label="item.label"
 						      :value="item.index">
 						    </el-option>
